@@ -1,67 +1,67 @@
-const oneMinute = 1000 * 60; // 一分钟的毫秒数
-const oneHour = oneMinute * 60; // 一小时的毫秒数
-const oneDay = oneHour * 24; // 一天的毫秒数
-const oneWeek = oneDay * 7; // 一星期的毫秒数
-const oneMonth = oneDay * 30; // 一个月的毫秒数
+const oneMinute = 1000 * 60; // 一Minute in milliseconds
+const oneHour = oneMinute * 60; // -Hour in milliseconds
+const oneDay = oneHour * 24; // -Day in milliseconds
+const oneWeek = oneDay * 7; // -Week in milliseconds
+const oneMonth = oneDay * 30; // -Month in milliseconds
 
 /**
- * 按天数减少
+ * Decrease by the day
  *
- * @param days 要减少的天数
+ * @param days The number of days to decrease
  */
 Date.prototype.minusDays = function (days) {
     return this.minusMillis(oneDay * days);
 };
 
 /**
- * 按天数增加
+ * Increase by the day
  *
- * @param days 要增加的天数
+ * @param days The number of days to increase
  */
 Date.prototype.plusDays = function (days) {
     return this.plusMillis(oneDay * days);
 };
 
 /**
- * 按小时减少
+ *  Decrease by the hour
  *
- * @param hours 要减少的小时数
+ * @param hours The number of hours to decrease
  */
 Date.prototype.minusHours = function (hours) {
     return this.minusMillis(oneHour * hours);
 };
 
 /**
- * 按小时增加
+ * Increase by the hour
  *
- * @param hours 要增加的小时数
+ * @param hours The number of hours to increase
  */
 Date.prototype.plusHours = function (hours) {
     return this.plusMillis(oneHour * hours);
 };
 
 /**
- * 按分钟减少
+ * Decrease by the minute
  *
- * @param minutes 要减少的分钟数
+ * @param minutes The number of minutes to decrease
  */
 Date.prototype.minusMinutes = function (minutes) {
     return this.minusMillis(oneMinute * minutes);
 };
 
 /**
- * 按分钟增加
+ * Increase by the minute
  *
- * @param minutes 要增加的分钟数
+ * @param minutes The number of minutes to increase
  */
 Date.prototype.plusMinutes = function (minutes) {
     return this.plusMillis(oneMinute * minutes);
 };
 
 /**
- * 按毫秒减少
+ * Decrease by the milisecond
  *
- * @param millis 要减少的毫秒数
+ * @param millis The number of miliseconds to decrease
  */
 Date.prototype.minusMillis = function(millis) {
     let time = this.getTime() - millis;
@@ -71,9 +71,9 @@ Date.prototype.minusMillis = function(millis) {
 };
 
 /**
- * 按毫秒增加
+ * Increase by the milisecond
  *
- * @param millis 要增加的毫秒数
+ * @param millis The number of miliseconds to increase
  */
 Date.prototype.plusMillis = function(millis) {
     let time = this.getTime() + millis;
