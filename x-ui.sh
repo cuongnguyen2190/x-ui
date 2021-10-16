@@ -134,7 +134,7 @@ uninstall() {
 }
 
 reset_user() {
-    confirm "确定要将用户名和密码重置为 admin 吗" "n"
+    confirm "确定要将用户名和password重置为 admin 吗" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -142,12 +142,12 @@ reset_user() {
         return 0
     fi
     /usr/local/x-ui/x-ui setting -username admin -password admin
-    echo -e "用户名和密码已重置为 ${green}admin${plain}，现在请重启面板"
+    echo -e "用户名和password已重置为 ${green}admin${plain}，现在请重启面板"
     confirm_restart
 }
 
 reset_config() {
-    confirm "确定要重置所有面板设置吗，账号数据不会丢失，用户名和密码不会改变" "n"
+    confirm "确定要重置所有面板设置吗，账号数据不会丢失，用户名和password不会改变" "n"
     if [[ $? != 0 ]]; then
         if [[ $# == 0 ]]; then
             show_menu
@@ -413,7 +413,7 @@ show_menu() {
   ${green}2.${plain} 更新 x-ui
   ${green}3.${plain} 卸载 x-ui
 ————————————————
-  ${green}4.${plain} 重置用户名密码
+  ${green}4.${plain} 重置用户名password
   ${green}5.${plain} 重置面板设置
   ${green}6.${plain} 设置面板端口
 ————————————————

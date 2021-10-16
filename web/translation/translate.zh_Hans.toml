@@ -1,6 +1,6 @@
 # html/login.html
 "username" = "用户名"
-"password" = "密码"
+"password" = "password"
 "login" = "登录"
 "confirm" = "确定"
 "cancel" = "取消"
@@ -29,9 +29,9 @@
 
 "userSettings" = "用户设置"
 "oldUsername" = "原用户名"
-"oldPassword" = "原密码"
+"oldPassword" = "原password"
 "newUsername" = "新用户名"
-"newPassword" = "新密码"
+"newPassword" = "新password"
 "updateUser" = "修改"
 "xraySettings" = "xray 相关设置"
 "xrayConfigTemplate" = "xray 配置模版"
