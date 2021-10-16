@@ -3,17 +3,17 @@ version: '3.7'
 networks:
     default:
         external:
-          name: network-internal
+          name: internal-network
 
 services:
     x-ui:
         build:
             context: .
             dockerfile: Dockerfile
-        # image: hungcuongvt90/x-ui:latest
+        image: hungcuongvt90/x-ui:arm64
         container_name: x-ui
         volumes:
             - ./config/xray/config.json:/root/bin/config.json
-        ports:
-            - 54321:54321
+        expose:
+            - 54321
         restart: always
